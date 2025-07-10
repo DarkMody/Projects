@@ -1,0 +1,79 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+.parent {
+  position: relative;
+  width: 550px;
+  height: 300px;
+  margin: auto;
+}
+.child1,
+.child2 {
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  width: 250px;
+  height: 300px;
+  background-color: #eee; 
+}
+.child2 {
+  right: 0;
+}
+.child1::before {
+  content: "Basic";
+}
+.child2::before {
+  content: "Pro";
+}
+.child1::before,
+.child2::before {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  top:5%;
+  color: white;
+  background-color: #03a9f4;
+  padding: 10px;
+  width:200px;
+  text-align: center;
+  border-radius: 9px;
+}
+.child1::after {
+  content: "Free";
+}
+.child2::after {
+  content: "50$";
+}
+.child1::after,
+.child2::after {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  top:25%;
+  font-size: 50px;
+  background-color: #e3e3e3;
+  width:200px;
+  height: 200px;
+  text-align: center;
+  line-height: 185px;
+  border-radius: 50%;
+}
+.divide {
+  position: absolute;
+  width: 1px;
+  height: 300px;
+  left: 50%;
+  transform: translate(-50% , 0%);
+  background-color: #03a9f4;
+}
+.divide::before {
+  content: "Or";
+  position: absolute;
+  padding: 10px 10px;
+  color: white;
+  background-color: #03a9f4;
+  top: 50%;
+  transform: translate(0% , -50%);
+  border-radius: 50%;
+  left: -17px;
+}

@@ -1,0 +1,148 @@
+.all {
+  margin: 20px auto;
+  width: 600px;
+  height: 630px;
+  position: relative;
+}
+
+.l::before {
+  content: "";
+  position: absolute;
+  background-color: orange;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  animation: first 2s linear;
+  animation-fill-mode: both;
+}
+
+@keyframes first {
+  20% {
+    transform: translateX(-210px);
+  }
+
+  70% {
+    transform: translate(-210px, -560px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-210px, -560px);
+    opacity: 0;
+  }
+}
+
+.e {
+  position: absolute;
+  width: 280px;
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    "one two two two"
+    "one . . ."
+    "one . . ."
+    "one . . ."
+    "one three three three"
+    "one . . ."
+    "one . . ."
+    "one . . ."
+    "one four four four";
+}
+
+.e::before {
+  content: "";
+  position: absolute;
+  background-color: orange;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  top: 0;
+  margin-top: 15px;
+  margin-right: 15px;
+  animation: second 3s linear 2s;
+}
+
+@keyframes second {
+  10% {
+    transform: translateX(-210px);
+  }
+
+  20% {
+    transform: translate(-210px, 280px);
+  }
+
+  30% {
+    transform: translate(0, 280px)
+  }
+
+  40% {
+    transform: translate(-210px, 280px);
+  }
+
+  50% {
+    transform: translate(-210px, 560px);
+  }
+
+  60% {
+    transform: translate(0, 560px);
+  }
+
+  70% {
+    transform: translate(-210px, 560px);
+  }
+
+  90% {
+    transform: translateX(-210px);
+  }
+}
+
+.l {
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 280px;
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    "five . . ."
+    "five . . ."
+    "five . . ."
+    "five . . ."
+    "five . . ."
+    "five . . ."
+    "five . . ."
+    "five . . ."
+    "five six six six";
+}
+
+.e div,
+.l div {
+  background-color: #323634;
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
